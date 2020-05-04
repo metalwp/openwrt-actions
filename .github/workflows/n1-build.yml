@@ -1,4 +1,4 @@
-name: n1 docker OpenWrt CI
+name: n1 docker OpenWrt CI-1
 on:
   schedule:
     - cron:  0 7 * * 6
@@ -29,6 +29,7 @@ jobs:
         sudo -E apt-get -qq update
         sudo -E apt-get -yqq install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip pigz
         sudo -E apt-get -yqq autoremove --purge
+        
         sudo -E apt-get -qq clean
 
     - name: Download - openwrt source download
